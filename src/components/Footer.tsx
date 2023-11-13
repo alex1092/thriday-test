@@ -6,7 +6,7 @@ export const Footer = () => {
     <View style={styles.container}>
       <Text style={styles.textStyles}>
         Team Thrive Pty Ltd ABN 15 637 676 496 (Thriday) is an authorised representative of Regional
-        Australia Bank ABN 21 087 650 360  AFSL 241167 (Regional Australia Bank).
+        Australia Bank ABN 21 087 650 360 AFSL 241167 (Regional Australia Bank).
       </Text>
     </View>
   );

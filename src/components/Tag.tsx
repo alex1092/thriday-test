@@ -1,6 +1,6 @@
 import { colors } from '@theme/colors';
 import { useState, useCallback, memo } from 'react';
-import { Pressable, Text, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import ExpenseIcon from '../../assets/icons/ExpensesIcon';
 import IncomeIcon from '../../assets/icons/IncomeIcon';

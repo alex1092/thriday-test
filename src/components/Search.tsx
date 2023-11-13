@@ -1,6 +1,6 @@
 import { colors } from '@theme/colors';
 import { useState } from 'react';
-import { View, Text, Pressable, StyleSheet, TextInput } from 'react-native';
+import { View, Pressable, StyleSheet, TextInput } from 'react-native';
 
 import FilterIcon from '../../assets/icons/FilterIcon';
 import SearchIcon from '../../assets/icons/SearchIcon';

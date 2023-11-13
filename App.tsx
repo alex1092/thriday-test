@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import { colors } from '@theme/colors';
 
 import AccountsIcon from './assets/icons/AccountsIcon';
 import HomeIcon from './assets/icons/HomeIcon';
@@ -13,7 +14,6 @@ import { InvoiceScreen } from './src/screens/InvoiceScreen';
 import { PaymentScreen } from './src/screens/PaymentsScreen';
 import { SettingsScreen } from './src/screens/SettingsScreen';
 import { TaxScreen } from './src/screens/TaxScreen';
-import { colors } from '@theme/colors';
 
 const Tab = createBottomTabNavigator();
 

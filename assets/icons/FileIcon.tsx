@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
 const FileIcon = (props: SvgProps) => (
-  <Svg  width={20} height={20} fill="none" {...props}>
+  <Svg width={20} height={20} fill="none" {...props}>
     <Path
       stroke="#fff"
       strokeLinecap="round"

@@ -1,10 +1,10 @@
 import { colors } from '@theme/colors';
+import { Image } from 'expo-image';
 import { memo, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import ReceiptIcon from '../../assets/icons/ReceiptIcon';
-import { Image } from 'expo-image';
 import FileIcon from '../../assets/icons/FileIcon';
+import ReceiptIcon from '../../assets/icons/ReceiptIcon';
 
 export type CardHorizontalTransactionProps = {
   merchantName?: string;
