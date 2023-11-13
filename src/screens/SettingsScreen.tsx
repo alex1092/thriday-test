@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 
-export const PaymentScreen = () => {
+export const SettingsScreen = () => {
   return (
     <View
       style={{
@@ -8,7 +8,7 @@ export const PaymentScreen = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>Payment Screen</Text>
+      <Text>Settings Screen</Text>
     </View>
   );
 };

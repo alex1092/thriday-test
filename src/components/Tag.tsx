@@ -1,6 +1,6 @@
 import { colors } from '@theme/colors';
 import { useState, useCallback, memo } from 'react';
-import { Pressable, Text, StyleSheet, View } from 'react-native';
+import { Pressable, Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import ExpenseIcon from '../../assets/icons/ExpensesIcon';
 import IncomeIcon from '../../assets/icons/IncomeIcon';
@@ -30,7 +30,7 @@ export const Tag = memo(() => {
   return (
     <View style={styles.container}>
       {tagValues.map((tag, index) => (
-        <Pressable
+        <TouchableOpacity
           key={index}
           onPress={() => handlePress(index)}
           style={[
@@ -45,7 +45,7 @@ export const Tag = memo(() => {
             {tag.label}
           </Text>
           {tag.icon ?? <View>{tag.icon}</View>}
-        </Pressable>
+        </TouchableOpacity>
       ))}
     </View>
   );
@@ -70,14 +70,14 @@ const styles = StyleSheet.create({
   activeButtonStyle: {
     backgroundColor: colors.primary.green,
     borderColor: colors.primary.green,
-    borderWidth: 1,
+    borderWidth: 2,
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 8,
   },
   inactiveButtonStyles: {
-    borderWidth: 1,
-    borderColor: colors.neutral.borderColorWhite,
+    borderWidth: 2,
+    borderColor: colors.neutral.brightGrey,
   },
   activeTextStyle: {
     color: colors.neutral.white,
