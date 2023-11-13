@@ -37,10 +37,14 @@ export const Tag = memo(() => {
             index === activeIndex ? styles.activeButtonStyle : styles.inactiveButtonStyles,
             styles.buttonStyle,
           ]}>
-          <Text style={index === activeIndex ? styles.activeTextStyle : styles.inactiveTextStyle}>
+          <Text
+            style={[
+              tag.icon ? { marginRight: 6 } : { marginRight: 0 },
+              index === activeIndex ? styles.activeTextStyle : styles.inactiveTextStyle,
+            ]}>
             {tag.label}
           </Text>
-          {tag.icon ?? <View style={styles.iconStyle}>{tag.icon}</View>}
+          {tag.icon ?? <View>{tag.icon}</View>}
         </Pressable>
       ))}
     </View>
@@ -81,8 +85,5 @@ const styles = StyleSheet.create({
   },
   inactiveTextStyle: {
     fontSize: 13,
-  },
-  iconStyle: {
-    marginLeft: 6,
   },
 });

@@ -10,5 +10,7 @@ export const colors = {
     coolGrey: '#8C8CA1',
     davysGrey: '#555555',
     borderColorWhite: '#ECF1F4',
+    brightGrey: '#EEEEEE',
+    culturedGrey: '#F6F6F6',
   },
 };
