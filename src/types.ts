@@ -56,3 +56,9 @@ export interface TransactionsEntity {
   tags?: (string | null)[] | null;
   attachment?: null[] | null;
 }
+
+export enum TransactionTypeEnum {
+  Payment = 'PAYMENT',
+  TransferIncoming = 'TRANSFER_INCOMING',
+  TransferOutgoing = 'TRANSFER_OUTGOING',
+}

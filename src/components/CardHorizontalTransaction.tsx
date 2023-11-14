@@ -5,21 +5,18 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import FileIcon from '../../assets/icons/FileIcon';
 import ReceiptIcon from '../../assets/icons/ReceiptIcon';
+import { TransactionTypeEnum } from '../types';
 
 export type CardHorizontalTransactionProps = {
   merchantName?: string;
   suburb: string;
+  description?: string;
   amount: string;
   shortCategory: string;
   transactionType: string;
   logoUrl?: string;
+  id?: string;
 };
-
-export enum TransactionTypeEnum {
-  Payment = 'PAYMENT',
-  TransferIncoming = 'TRANSFER_INCOMING',
-  TransferOutgoing = 'TRANSFER_OUTGOING',
-}
 
 const amountStyles = (transactionType: string, amount: string) => {
   switch (transactionType) {

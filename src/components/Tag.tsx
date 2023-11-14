@@ -1,11 +1,11 @@
 import { colors } from '@theme/colors';
-import { useState, useCallback, memo } from 'react';
+import { useCallback, memo } from 'react';
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import ExpenseIcon from '../../assets/icons/ExpensesIcon';
 import IncomeIcon from '../../assets/icons/IncomeIcon';
 
-const tagValues = [
+const TagButtonValues = [
   {
     label: 'All',
     icon: null,
@@ -19,17 +19,19 @@ const tagValues = [
     icon: <ExpenseIcon />,
   },
 ];
+type TagProps = {
+  activeIndex: number;
+  setActiveIndex: (index: number) => void;
+};
 
-export const Tag = memo(() => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+export const TagButton = memo(({ setActiveIndex, activeIndex }: TagProps) => {
   const handlePress = useCallback((index: number) => {
     setActiveIndex(index);
   }, []);
 
   return (
     <View style={styles.container}>
-      {tagValues.map((tag, index) => (
+      {TagButtonValues.map((tag, index) => (
         <TouchableOpacity
           key={index}
           onPress={() => handlePress(index)}
@@ -57,6 +59,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     flexDirection: 'row',
     gap: 12,
+    marginBottom: 32,
   },
   buttonStyle: {
     flexGrow: 1,
